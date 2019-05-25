@@ -1,0 +1,46 @@
+\documentclass[../main.tex]{subfiles}
+
+\begin{document}
+
+\chapter{Introdução}\label{cap:introducao}
+
+A realidade aumentada (RA) é definida por \citeonline{carmigniani2011augmented} como uma visão direta ou indireta em tempo real de um elemento físico do mundo real que foi aumentado através da adição de informação virtual a ele. Essas informações podem ser imagens, áudios, vídeos, toque, ou sensações hápticas sobrepostas em tempo real \cite{buchmann2004fingartips}. A realidade aumentada difere de outras técnicas, como realidade virtual (RV), onde a imersão do usuário em um um ambiente virtual é completa, impossibilitando a visão do mundo real. A Realidade Aumentada permite que o usuário enxergue o mundo real com a sobreposição de informações virtuais a ele. Assim, os sistemas que fazem uso dessa técnica complementam a realidade, em vez de a substituir. De fato, em anos recentes, a realidade aumentada vem sendo utilizada em diversos campos em razão de sua capacidade de auxiliar usuários na realização de tarefas do mundo real, contribuindo para a melhora de seu desempenho. Além disso, o uso de RA tem demonstrado aumentar a satisfação do usuário na condução de tarefas nas mais diversas áreas \cite{balog2010role, haugstvedt2012mobile, wojciechowski2013evaluation}.
+
+
+Ferramentas de autoria multimídia suportam o desenvolvimento de produtos multimídia (como vídeos interativos e apresentações) através da integração de objetos de mídia de diferentes tipos (como imagens, sons e vídeos) de uma maneira sincronizada e com significado. Apesar da qualidade de um conteúdo multimídia ser consideravelmente dependente da qualidade individual dos objetos de mídia que o compõe, é somente com uma composição apropriada de todos esses objetos em uma apresentação que os usuários finais irão, verdadeiramente, ter uma experiência de qualidade \cite{pellan2009authoring}. 
+
+Uma maneira comum de representar apresentações multimídia interativas é através de documentos multimídia, como a linguagem de marcação de hipertexto, do inglês \emph{Hypertext Markup Language} (HTML) \cite{graham1995html}, a 
+linguagem de integração multimídia sincronizada, do inglês \emph{Synchronized Multimedia Integration Language} (SMIL) \cite{rutledge2001smil}, e a 
+linguagem de contexto aninhado, do inglês \emph{Nested Context Language} (NCL) \cite{soares2009programando}. A maioria dos documentos de multimídia atuais fazem uma separação clara da especificação dos objetos de mídia que compões a apresentação multimídia e da especificação do sincronismo entre esses objetos de mídia, que define a dependência temporal entre eles. Existem algumas diferenças na forma como é especificado esse sincronismo nos diferentes modelos de documento multimídia. Alguns deles, como NCL e HTML, explicitam uma entidade chamada de \emph{elo} (do inglês \emph{link}). Em outros casos, como nos documentos da linguagem SMIL, os objetos de mídia são organizados em estruturas hierárquicas, chamadas de composições temporais, que implicitamente definem a sincronização de objetos de mídia. Além disso, alguns desses documentos suportam outros tipos de composições (por exemplo, os elementos \emph{context} e \emph{div} em NCL e HTML, respectivamente) como uma forma de simplificar a autoria e estrutura de documentos complexos. De qualquer forma, a especificação do sincronismo é uma das tarefas que mais demanda tempo no processo de autoria multimídia.
+
+Apesar dos conceitos usados nos modelos de documentos supracitados serem de fácil compreensão, a representação textual deles não é de fácil utilização por não-programadores, que geralmente estão mais familiarizados com representações visuais. Ferramentas de autoria multimídia são programas que permitem a concepção de apresentações multimídia com o objetivo de simplificar o processo de autoria, permitindo que não-programadores possam criar tais apresentações. De fato, o desenvolvimento de um método que simplifique o processo de autoria deve aumentar a satisfação do usuário em desenvolver apresentações multimídia, abrindo novas possibilidades para pessoas criativas criarem experiências multimídia. Como, atualmente, a forma mais comum de interação com um computador é ainda através de uma interface gráfica do usuário (do inglês \emph{Graphical User Interface (GUI)}), com o uso de janelas, ícones, menus e tipicamente um mouse, grande parte das ferramentas de autoria multimídia atuais adotam esse paradigma.
+
+Diferente dessas ferramentas, este trabalho propõe um processo de autoria multimídia baseado em realidade aumentada. Nesse processo, ao invés do uso de uma GUI comum, é utilizada a realidade aumentada (RA) como uma forma inovadora de interface com o usuário.  
+
+\section{Objetivos}
+    Esta seção detalha os objetivos geral e específicos do presente trabalho.
+\subsection{Objetivo geral}
+    O principal objetivo deste trabalho é a proposição e avaliação de um processo de autoria multimídia que faça uso de realidade aumentada como forma de interface com o usuário.
+    
+\subsection{Objetivos específicos}
+
+\prcnote{Pensar em outros objetivos específicos}
+\begin{itemize}
+    \item Desenvolver uma ferramenta que utilize o processo proposto, propiciando a autoria de apresentações multimídia por meio da realidade aumentada.
+    
+    \item Avaliar o processo proposto com usuários.
+\end{itemize}
+
+\section{Organização do trabalho}
+
+Além do Capítulo \ref{cap:introducao}, este trabalho está organizado em mais 4 capítulos, sendo que o Capítulo \ref{cap:relacionados} apresenta os trabalhos relacionados a este.
+
+
+O Capítulo \ref{cap:proposta} descreve o proposta deste trabalho. Tal capítulo descreve o processo de autoria proposto, bem como sua implementação na ferramenta de autoria desenvolvida.
+
+O Capítulo \ref{cap:avaliacao} detalha a forma como o método proposto foi avaliado, apresenta e discute os resultados obtidos.
+
+Por fim, o Capítulo \ref{cap:avaliacao} contém as conclusões e considerações finais deste trabalho.
+
+
+\end{document}

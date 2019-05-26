@@ -47,23 +47,64 @@ A ferramenta Adobe Animate \cite{adobe_animate_2017} é uma ferramenta propriet�
 \label{fig:adobe}
 \end{figure}
 
+A ferramenta NEXT~\cite{paulo_de_mattos_next_2013} é um editor gráfico que permite o desenvolvimento de documentos NCL por autores sem conhecimentos dessa linguagem. Para isso, tal editor utiliza \emph{templates} compostos hipermídia, que representam estruturas genéricas para programas NCL. Tais templates tornam o processo de autoria mais abstrato, mas, ao mesmo tempo, reduzem o poder criativo da ferramenta. Por essa razão, um \emph{plugin} que permite a criação de apresentações multimídia sem o uso de \emph{templates} foi desenvolvido. Similar a este trabalho, a ferramenta faz uso do modelo NCM, modelo este que baseia a linguagem NCL.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.5\linewidth]{IMG/Relacionados/next.png}
+\caption{Interface da ferramenta NEXT.}
+\fonte{~\citeonline{paulo_de_mattos_next_2013}}
+\label{fig:next}
+\end{figure}
+
+A ferramenta NCL~Composer~\cite{azevedo_composer_2014} é uma ferramenta de autoria multimídia multiplataforma e flexível para criação de aplicações para a TV Digital Interativa em NCL. No Composer as abstrações são definidas nos diversos tipos de visões que permitem simular um tipo específico de edição (estrutural, temporal, leiaute e textual). Assim como a abordagem proposta, o Composer é baseado no modelo NCM. A Figura \ref{fig:composer} mostra a interface da ferramenta NCL~Composer.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.5\linewidth]{IMG/Relacionados/composer.jpg}
+\caption{Interface da ferramenta NCL~Composer.}
+\fonte{~\citeonline{azevedo_composer_2014}}
+\label{fig:composer}
+\end{figure}
 
 Diferente dessas ferramentas, a abordagem proposta não utiliza o modo tradicional de interface (baseada em janelas, ícones e menus), mas explora o uso de RA e objetos do mundo real (marcadores) para especificar o comportamento e relações entre \emph{objetos de mídia} na apresentação. Desta feita, este trabalho explora uma nova metáfora para a autoria de conteúdo multimídia, que pode também estimular e entreter o usuário simultaneamente.
 
-Em particular, apesar de usar uma técnica de interação diferente, o modelo conceitual da proposta BumbAR é baseado no modelo NCM~(Nested Context Model)~\cite{soares_nested_2005}, que também é sedo pela abordagem baseada em interface gráfica comum da NCL Composer~\cite{azevedo_composer_2014}. A ferramenta BumbAR também exporta o conteúdo criado para NCL (Nested Context Language)~\cite{soares_programando_2009}, permitindo que a apresentação criada seja tocada em aparelhos de TV digital ou navegadores web (usando WebNCL~\cite{melo_webncl_2012} ou NCL4Web~\cite{silva_ncl4web_2013}, por exemplo).
+Em particular, apesar de usar uma técnica de interação diferente, o modelo conceitual da proposta BumbAR é baseado no modelo NCM~(Nested Context Model)~\cite{soares_nested_2005}, que também é usado pela abordagem baseada em WIMP da NEXT~\cite{paulo_de_mattos_next_2013} e da NCL Composer~\cite{azevedo_composer_2014}. A ferramenta BumbAR também exporta o conteúdo criado para NCL (Nested Context Language)~\cite{soares_programando_2009}, permitindo que a apresentação criada seja tocada em aparelhos de TV digital ou navegadores web (usando WebNCL~\cite{melo_webncl_2012} ou NCL4Web~\cite{silva_ncl4web_2013}, por exemplo).
 
 \section{Ferramentas de autoria baseadas em RA}
 \label{sec:ferramentas_ra}
 
 Apesar da maioria do conteúdo em RA ainda ser criado por desenvolvedores de sistemas, algumas ferramentas de autoria foram propostas para criar conteúdo em realidade aumentada. Elas geralmente fornecem ferramentas complexas para designers modelarem objetos tridimensionais e associá-los com objetos físicos e marcadores. A maioria delas, entretanto, ainda segue um abordagem baseada em uma interface gráfica com o usuário, do inglês \emph{graphical user interface(GUI)}. Exemplos dessa abordagem são as seguintes ferramentas: MARS Authoring Tool~\cite{sinem_authoring_2003}, DART~\cite{macintyre_dart_2004}, ComposAR~\cite{seichter_composar_2008}, AuthorAR~\cite{lucrecia_authorar_2013}, Lagarto~\cite{maia_lagarto_2017}. Outras ferramentas, mais relacionadas a este trabalho, proporcionam uma abordagem imersiva ou mista (interface gráfica comum em conjunto com um ambiente imersivo) para a criação de conteúdo RA.
 
-Por exemplo, \citeonline{langlotz_sketching_2012} apresenta um sistema para criar conteúdo RA baseados em dispositivos móveis. Tal sistema possui como público alvo uma audiência inexperiente. Através da interação direta com o dispositivo móvel usando a tela sensível ao toque, o sistema permite que autores criem e registrem primitivas 3D, modificar primitivas 3D registradas, aplicar textura aos objetos 3D registrados e gerem objetos 2D registrados~(que podem servir como anotações). Embora a proposta seja interessante, não há uma avaliação com o público alvo da proposta. Assim, é difícil saber quão bom o sistema é na visão dos usuários finais.
+Por exemplo, \citeonline{langlotz_sketching_2012} apresenta um sistema para criar conteúdo RA baseados em dispositivos móveis. Tal sistema possui como público alvo uma audiência inexperiente. Através da interação direta com o dispositivo móvel usando a tela sensível ao toque, o sistema permite que autores criem e registrem primitivas 3D, modificar primitivas 3D registradas, aplicar textura aos objetos 3D registrados e gerem objetos 2D registrados~(que podem servir como anotações). Embora a proposta seja interessante, não há uma avaliação com o público alvo da proposta. Assim, é difícil saber quão bom o sistema é na visão dos usuários finais. A Figura \ref{fig:langlotz} mostra a replicação de um prédio utilizando o sistema. 
+
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=1\linewidth]{IMG/Relacionados/langlotz.png}
+\caption{Replicação de um prédio usando o sistema.}
+\fonte{~\citeonline{langlotz_sketching_2012}}
+\label{fig:langlotz}
+\end{figure}
 
 Os trabalhos de \citeonline{vera_situar_2016} e \citeonline{sucar_platform_2017} também apresentam um trabalho em andamento no desenvolvimento de uma ferramenta de autoria baseada em RA, chamada de SituAR, para criar conteúdo RA \emph{in-situ}. O principal objetivo da proposta é aumentar, no sentido de realidade aumentada, pontos de interesse, do inglês \emph{points of interest~(POIs)} para cidades inteligentes. Como características previstas para o SituAR, os autores mencionam: criar e visualizar anotações, visualização de mapa, e expandir anotações próximas. Como mencionado, a abordagem proposta ainda é um projeto em andamento, e os trabalhos citados não fornecem detalhes suficientes para uma comparação mais detalhada.
 
-Diferente das ferramentas de autoria para a criação de conteúdo RA mencionadas acima, o conteúdo criado pela proposta deste trabalho não é conteúdo RA. O principal objetivo é explorar RA como uma forma inovadora de interface com o usuário para criação de apresentações multimídia tradicionais~(composta de imagens, vídeos, músicas, etc.).
+Diferente das ferramentas de autoria para a criação de conteúdo RA mencionadas acima, o conteúdo criado pela proposta deste trabalho não é conteúdo RA. O principal objetivo é explorar a RA como uma forma inovadora de interface com o usuário para criação de apresentações multimídia tradicionais~(composta de imagens, vídeos, músicas, etc.).
 
-De maneira similar à proposta deste trabalho, \citeonline{shin_ar_2005} também possuem o objetivo de criar um ferramenta de autoria baseada em RA para criar conteúdo não aumentado. A ferramenta baseada em RA posposta por \citeonline{shin_ar_2005} tem o intuito de criar \emph{storyboards}(série de imagens ou desenhos que mostram a evolução de uma animação ou vídeo). Com o uso do \emph{item block}(marcador RA) proposto no trabalho, é possível a especificação de personagens, informação de plano de fundo, propriedades de palco, ações, e expressões faciais. Através do posicionamento de itens baseados em personagens na visão da câmera, é possível determinar a pose dos modelos tridimensionais correspondentes na cena. Componentes dinâmicos, como ações e expressões faciais, podem ser posicionadas em qualquer lugar dentro do campo de visão da câmera. Apesar de possuírem natureza diferente~(o presente trabalho está interessado principalmente no comportamento temporal de uma apresentação multimídia enquanto \citeonline{shin_ar_2005} estão interessados em \emph{storyboards} para cenas tridimensionais) a fase de criação de elos (detalhada na Seção \ref{subsec:criacao_elos}) proposta neste trabalho tem relação com os componentes dinâmicos propostos por \citeonline{shin_ar_2005}. Entretanto, um dos pontos negativos do trabalho mencionado é a não realização de uma avaliação com possíveis usuários.
+De maneira similar à proposta deste trabalho, \citeonline{shin_ar_2005} também possuem o objetivo de criar um ferramenta de autoria baseada em RA para criar conteúdo não aumentado. A ferramenta baseada em RA posposta por \citeonline{shin_ar_2005} tem o intuito de criar \emph{storyboards}(série de imagens ou desenhos que mostram a evolução de uma animação ou vídeo). Com o uso do \emph{item block}(marcador RA) proposto no trabalho, é possível a especificação de personagens, informação de plano de fundo, propriedades de palco, ações, e expressões faciais. Através do posicionamento de itens baseados em personagens na visão da câmera, é possível determinar a pose dos modelos tridimensionais correspondentes na cena. Componentes dinâmicos, como ações e expressões faciais, podem ser posicionadas em qualquer lugar dentro do campo de visão da câmera. A Figura \ref{fig:shin} mostra a composição de uma cena do filme "The Matrix" com a proposta de \citeonline{shin_ar_2005}. 
+
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=1\linewidth]{IMG/Relacionados/shin.png}
+\caption{Composição de uma cena: marcadores (esquerda) e cena composta (direita).}
+\fonte{~\citeonline{shin_ar_2005}}
+\label{fig:shin}
+\end{figure}
+
+Apesar de possuírem natureza diferente~(o presente trabalho está interessado principalmente no comportamento temporal de uma apresentação multimídia enquanto \citeonline{shin_ar_2005} estão interessados em \emph{storyboards} para cenas tridimensionais) a fase de criação de elos (detalhada na Seção \ref{subsec:criacao_elos}) proposta neste trabalho tem relação com os componentes dinâmicos propostos por \citeonline{shin_ar_2005}. Entretanto, um dos pontos negativos do trabalho mencionado é a não realização de uma avaliação com possíveis usuários. 
+
+
 
 Finalmente, apesar deste trabalho estar especialmente interessado na especificação do comportamento de apresentações multimídia tradicionais, alguns conceitos e técnicas de interação apresentadas neste trabalho podem também ser úteis para outras ferramentas de autoria baseadas em RA (para a criação de conteúdo RA ou tradicional). Em especial, os conceitos de eventos do modelo NCM, no qual este trabalho é baseado, podem ser úteis para a especificação do comportamento de conteúdo RA. Entretanto, uma investigação dessa possibilidade está além do escopo deste trabalho, e é deixada como um possível trabalho futuro. 
 
@@ -72,6 +113,16 @@ Finalmente, apesar deste trabalho estar especialmente interessado na especifica�
 
 Outra área relacionada a este trabalho é a de interfaces de usuário tangíveis~\cite{ishii_tangible_2008}. O principal objetivo dessa área é propiciar interfaces tangíveis para que usuários possam usar objetos físicos tradicionais como elemento interativos com o computador. De fato, tecnologias RA podem ser usadas como uma base para facilitar o desenvolvimento de diversas interfaces tangíveis, e existem diversos exemplo integrando-os. 
 
-Por exemplo, \citeonline{ha_artalet_2010} propõe uma abordagem que mistura elementos de uma interface gráfica, do inglês \emph{graphical user interface}(GUI) com uma interface tangível, do inglês \emph{tangible user interface}(TUI) para criar conteúdo RA. No trablago, os autores propõem uma ferramenta de autoria para livros eletrônicos, do inglês \emph{eBook}, aprimorados com elementos RA. A interface tangível é composta de uma caixa cúbica acoplável a um mouse e com múltiplos marcadores impressos na caixa. De modo similar, como ficará mais claro no restante deste trabalho, a presente proposta também provê uma interface tangível (baseada em marcadores RA) em que os autores criam conteúdo através da interação com objetos físicos. Entretanto, diferentemente, o principal foco é em uma interface para a criação de apresentações multimídia.
+Por exemplo, \citeonline{ha_artalet_2010} propõe uma abordagem que mistura elementos de uma interface gráfica, do inglês \emph{graphical user interface}(GUI) com uma interface tangível, do inglês \emph{tangible user interface}(TUI) para criar conteúdo RA. No trabalho, os autores propõem a ferramenta ARTalet para a autoria de livros eletrônicos, do inglês \emph{eBook}, aprimorados com elementos RA. A interface tangível é composta de uma caixa cúbica acoplável a um mouse e com múltiplos marcadores impressos na caixa. A Figura \ref{fig:ha} ilustra a interface da ferramenta ARTalet. 
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=.5\linewidth]{IMG/Relacionados/ha.png}
+\caption{Interface da ferramenta ARTalet.}
+\fonte{~\citeonline{ha_artalet_2010}}
+\label{fig:ha}
+\end{figure}
 
 \end{document}
+
+De modo similar, como ficará mais claro no restante deste trabalho, a presente proposta também provê uma interface tangível (baseada em marcadores RA) em que os autores criam conteúdo através da interação com objetos físicos. Entretanto, diferentemente, o principal foco é em uma interface para a criação de apresentações multimídia.

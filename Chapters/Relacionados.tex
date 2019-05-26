@@ -11,12 +11,44 @@ Os trabalhos relacionados a este podem ser amplamente classificados em ferrament
 
 De modo similar a ferramentas de autoria para apresentações multimídia--- como GRiNS~\cite{bulterman_grins_1998}, %
 LimSee3~\cite{deltour_limsee3_2006}, %
-Adobe Flash/Adobe Animate~\cite{adobe_animate_2017}, %
+Adobe Animate~\cite{adobe_animate_2017}, %
 NEXT~\cite{paulo_de_mattos_next_2013}, %
 e NCL~Composer~\cite{azevedo_composer_2014}%
 --- o principal objetivo deste trabalho é permitir que usuários sem habilidades com programação criem conteúdo multimídia.
 
-Diferente dessas ferramentas, a ferramenta proposta não utiliza o modo tradicional de interface (baseada em janelas, ícones e menus), mas explora o uso de RA e objetos do mundo real (marcadores) para especificar o comportamento e relações entre \emph{objetos de mídia} na apresentação. Desta feita, este trabalho explora uma nova metáfora para a autoria de conteúdo multimídia, que pode também estimular e entreter o usuário simultaneamente.
+A ferramenta GRiNS~\cite{bulterman_grins_1998} é um ambiente de autoria e apresentação que pode ser usado para criar e tocar documentos SMIL\cite{rutledge2001smil} criados com a própria ferramenta ou fora dela. SMIL é uma linguagem declarativa para a descrição de documentos multimídia baseados em Web. A Figura \ref{fig:grins} mostra conteúdo multimídidia criado utilizando a ferramenta GRiNS em que ocorre o aumento de informação durante a transmissão de um jornal, em que informações adicionais sobre o âncora são mostradas. Diferente dessa ferramenta, que é baseada no paradigma da linguagem SMIL, a abordagem proposta é baseada no modelo do contexto aninhado, do inglês \emph{Nested Context Model}~(NCM)\cite{soares_nested_2005}.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.5\linewidth]{IMG/Relacionados/grins.png}
+\caption{Aumentando informação durante um jornal.}
+\fonte{\citeonline{bulterman_grins_1998}}
+\label{fig:grins}
+\end{figure}
+
+LimSee3~\cite{quint_nouguier_2019} é uma ferramenta de autoria baseado no modelo homônimo~\cite{deltour_limsee3_2006}. Tal modelo utiliza \emph{templates} enquanto mantém ricas capacidades de composição. LimSee3 é uma evolução da ferramenta LimSee2~\cite{deltour2005limsee2}~(uma ferramenta de autoria para a linguagem SMIL). A Figura \ref{fig:limsee3} mostra a interface da ferramenta LimSee3. Como mencionado anteriormente, a abordagem proposta neste trabalho é baseada no modelo NCM, diferente da ferramenta LimSee3.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.5\linewidth]{IMG/Relacionados/limsee3.jpg}
+\caption{Interface da ferramenta LimSee3.}
+\fonte{Site do projeto LimSee3 \cite{quint_nouguier_2019}}
+\label{fig:limsee3}
+\end{figure}
+
+
+A ferramenta Adobe Animate \cite{adobe_animate_2017} é uma ferramenta proprietária de autoria multimída e animação computacional. Tal ferramenta é utilizada para a criação de conteúdo para o Adobe Flash Player~\cite{adobe_flash2019}, tais como aplicações para a internet, jogos e desenhos animados. A Figura \ref{fig:adobe} mostra a interface da ferramenta Adobe Animate. Por ser uma ferramenta proprietária, maiores informações sobre o modelo em que a ferramenta é baseada não estão disponíveis.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=0.5\linewidth]{IMG/Relacionados/adobe.jpg}
+\caption{Interface da ferramenta Adobe Animate.}
+\fonte{Site da ferramenta Adobe Animate~\cite{adobe_animate_2017}}
+\label{fig:adobe}
+\end{figure}
+
+
+Diferente dessas ferramentas, a abordagem proposta não utiliza o modo tradicional de interface (baseada em janelas, ícones e menus), mas explora o uso de RA e objetos do mundo real (marcadores) para especificar o comportamento e relações entre \emph{objetos de mídia} na apresentação. Desta feita, este trabalho explora uma nova metáfora para a autoria de conteúdo multimídia, que pode também estimular e entreter o usuário simultaneamente.
 
 Em particular, apesar de usar uma técnica de interação diferente, o modelo conceitual da proposta BumbAR é baseado no modelo NCM~(Nested Context Model)~\cite{soares_nested_2005}, que também é sedo pela abordagem baseada em interface gráfica comum da NCL Composer~\cite{azevedo_composer_2014}. A ferramenta BumbAR também exporta o conteúdo criado para NCL (Nested Context Language)~\cite{soares_programando_2009}, permitindo que a apresentação criada seja tocada em aparelhos de TV digital ou navegadores web (usando WebNCL~\cite{melo_webncl_2012} ou NCL4Web~\cite{silva_ncl4web_2013}, por exemplo).
 

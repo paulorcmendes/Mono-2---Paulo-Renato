@@ -2,7 +2,7 @@
 
 \begin{document}
 
-\chapter{Proposta}\label{cap:proposta}
+\chapter{Autoria multimídia com RA}\label{cap:proposta}
 
 A principal contribuição deste trabalho é a proposta e avaliação de um processo de autoria baseado em realidade aumentada para a autoria de apresentações multimídia. O processo de autoria proposto é implementada na ferramenta de autoria \emph{BumbAR}, que permite a criação de conteúdo multimídia, bem como a visualização do resultado final. Além disso, a apresentação criada pode ser apresentada em navegadores de internet ou aparelhos de TV digital.
 
@@ -11,14 +11,14 @@ No que se segue, são discutidos o processo de autoria proposto ~(Seção~\ref{s
 \section{Processo de Autoria}
 \label{sec:processo_autoria}
 
-O processo de autoria de apresentações multimídia proposto consistem em duas fases distintas: \emph{configuração de objetos de mídia}~(Seção~\ref{subsec:midias_configuracao}), e \emph{criação de elos}~(Seção~\ref{subsec:criacao_elos}).
+O processo de autoria de apresentações multimídia proposto consistem em duas fases distintas: \emph{configuração de mídia}~(Seção~\ref{subsec:midias_configuracao}), e \emph{criação de elos}~(Seção~\ref{subsec:criacao_elos}).
 
 \subsection{Fase de configuração de mídias}
 \label{subsec:midias_configuracao}
 
 Na fase de configuração de mídias, os autores devem definir os objetos de mídia que fazem parte da apresentação e suas propriedades. Além disso, cada objeto de mídia é associado a um dos marcadores de realidade aumentada.
 
-Um \emph{objeto de mídia} é identificado por seu \emph{nome} e pelo seu localizador de recurso uniforme, do inglês \emph{Uniform Resource Locator} (URL), que aponta para o arquivo de mídia correspondente. Os tipos de mídia suportados pela ferramenta são os seguintes: imagem, vídeo e áudio.
+Um \emph{objeto de mídia} é identificado por seu \emph{nome} e pelo seu localizador de recurso uniforme, do inglês \emph{Uniform Resource Locator} (URL), que aponta para o arquivo de mídia correspondente. No contexto desta proposta, objetos de mídia englobam vídeos, imagens e áudios.
 
 Um \emph{objeto de mídia} possui propriedades que definem como essa mídia é apresentada. Na abordagem \emph{BumbAR}, as propriedades suportadas são as comumente utilizadas em apresentações multimídia em duas dimensões, como posição na tela (x e y), tamanho (largura e altura), transparência, e volume.
 
@@ -37,7 +37,7 @@ Considerando as propriedades espaciais, a posição, e tamanho de \emph{objetos 
 
 Na fase de criação de elos, é definida a evolução da apresentação multimídia no decorrer do tempo, e como ela reage a interações do usuário. Para fazer isso, é utilizada uma interface com o usuário baseada em RA, em que marcadores de RA pré-configurados para os \emph{objetos de mídia} são dinamicamente combinados a marcadores de RA relacionados ao comportamento dos \emph{objetos de mídia} da apresentação. Tal combinação é feita por meio da colisão, no mundo real, de marcadores relacionados à \emph{objetos de mídia} com marcadores relacionados a comportamento, resultando na criação de relacionamentos entre objetos de mídia, que será detalhado a seguir. Adicionalmente, para enfatizar os diferentes marcadores e dar retorno das ações do usuário, cada marcador de realidade aumentada é renderizado como um cubo 3D, que será referenciado como \emph{bloco RA} no restante deste trabalho.
 
-Os relacionamentos definidos entre \emph{ojetos de mídia} seguem o modelo de contexto aninhado, do inglês \emph{Nested Context Model} (NCM) \cite{soares_nested_2005}. Elos (mais especificamente, elos causais) são criados a partir da colisão de \emph{blocos RA} relacionados a \emph{objetos de mídia e comportamentos}. Um elo causal determina que, quando uma uma condição é satisfeita, uma ou mais ações são executadas. Cada ação e condição suportada é representada por um marcador RA e um \emph{bloco RA} específicos.
+Os relacionamentos definidos entre \emph{ojetos de mídia} seguem o modelo NCM~\cite{soares_nested_2005}. Elos (mais especificamente, elos causais) são criados a partir da colisão de \emph{blocos RA} relacionados a \emph{objetos de mídia e comportamentos}. Um elo causal determina que, quando uma uma condição é satisfeita, uma ou mais ações são executadas. Cada ação e condição suportada é representada por um marcador RA e um \emph{bloco RA} específicos.
 
 A Tabela \ref{tab:blocos_ra} mostra exemplos de cada um dos tipos de \emph{Blocos RA} suportados. Os símbolos usados para os marcadores e \emph{Blocos} RA, entretanto, variam de acordo com a condição, ação ou \emph{objeto de mídia} específicos. Por exemplo, apesar de seguirem o mesmo modelo, o marcador e \emph{Bloco RA} de uma condição \emph{onEnd} tem um nome e símbolo diferentes de um marcador e \emph{Bloco RA} de uma condição \emph{onBegin}, mostrados na primeira linha da Tabela \ref{tab:blocos_ra}. A Tabela \ref{tab:condicoes_acoes} mostra as condições e ações individuais a serem suportadas pela ferramenta \emph{BumbAR}. Os ícones usados para cada um deles são baseados na notação visual criada por \citeonline{laiola2008visual}.
 
@@ -68,7 +68,7 @@ condições.
 & \imgblock{IMG/Blocos/stopBlock.png}
 \\\midrule
 
-\textit{Media}
+\textit{Mídia}
 & É usado para representar
 \emph{objetos de mídia}.
 & \imgblock{IMG/Marcadores/mediaMarker.png}
@@ -145,7 +145,7 @@ O passo 1 acima é realizado arrastando e colidindo um \emph{bloco de condição
 
 O passo 2, que descreve a criação de um \emph{bloco de mídia-com-ação}, segue o mesmo procedimento do \emph{bloco de mídia-com-condição}, mas fazendo-se a colisão de um \emph{bloco de mídia} com um \emph{bloco de ação}.
 
-Depois de já ter um \emph{bloco de mídia-com-condição} ou um \emph{bloco de mídia-com-ação}, ainda é possível a alteração do tipo desses blocos. Para isso, é necessário colidir um outro \emph{bloco de condição} ou \emph{bloco de ação} com o bloco a ser alterado. Dessa forma, um mesmo \emph{objeto de mídia} pode ter diferentes papéis em diferentes elos. A Figura \ref{fig:mudando_papel} mostra um \emph{bloco de mídia-com-condição} com a condição \emph{onEnd} sendo transformado em um \emph{bloco de mídia-com-ação} com a ação \emph{Start}.
+Depois de já ter um \emph{bloco de mídia-com-condição} ou um \emph{bloco de mídia-com-ação}, ainda é possível a alteração do tipo desse bloco. Para isso, é necessário colidir um outro \emph{bloco de condição} ou \emph{bloco de ação} com o bloco a ser alterado. Dessa forma, um mesmo \emph{objeto de mídia} pode ter diferentes papéis em diferentes elos. A Figura \ref{fig:mudando_papel} mostra um \emph{bloco de mídia-com-condição} com a condição \emph{onEnd} sendo transformado em um \emph{bloco de mídia-com-ação} com a ação \emph{Start}.
 
 \begin{figure}[!ht]
 \centering
@@ -212,7 +212,7 @@ O \emph{marcador de elos}~(Figura \ref{fig:elo}(a)) mostra, empilhados, todos os
 \end{figure}
 
 
-Quando um \emph{bloco de elo} é renderizado, é colocado um texto sobreposto a ele representando o elo que o bloco representa, seguindo o padrão <condição> <objeto de mídia 1> <ação> <objeto de mídia 2>, de modo que quando a condição associada ao primeiro \emph{objeto de mídia} for satisfeita, a ação relacionada ao segundo \emph{objeto de mídia} será executada. Por exemplo, a Figura \ref{fig:elos} mostra o uso do \emph{marcador de elos} para mostrar dois elos criados: "\emph{onBegin media2 Stop media1}" e "\emph{onBegin media3 Start media4}".
+Quando um \emph{bloco de elo} é renderizado, é colocado um texto sobreposto a ele representando o elo que o bloco representa, seguindo o padrão <condição> <objeto de mídia 1> <ação> <objeto de mídia 2>, de modo que quando a condição associada ao primeiro \emph{objeto de mídia} for satisfeita, a ação relacionada ao segundo \emph{objeto de mídia} será executada. Por exemplo, a Figura \ref{fig:elos} mostra o uso do \emph{marcador de elos} para mostrar dois elos criados: "\emph{onBegin media2 Stop media1}"~e "\emph{onBegin media3 Start media4}".
 
 \begin{figure}[!ht]
 \centering
@@ -238,7 +238,7 @@ Caso deseje, o usuário pode remover um elo criado. Isso evita, por exemplo, que
 \fonte{Elaborado pelo autor.}
 \end{figure}
 
-Com o objetivo de fornecer uma visão geral da apresentação sendo criada, para que o usuário possa visualizar as relações entre \emph{objetos de mídia}, foi criado o \emph{marcador de visão estrutural}. Esse marcador pode ser visto na Figura \ref{fig:estrutural_marker}.
+Com o objetivo de fornecer uma visão geral da apresentação sendo criada, para que o usuário possa visualizar as relações entre \emph{objetos de mídia}, foi criado o \emph{marcador de visão estrutural}. Tal necessidade foi evidenciada a partir dos comentários dos participantes do estudo descrito no Capítulo \ref{cap:avaliacao}. Esse marcador pode ser visto na Figura \ref{fig:estrutural_marker}.
 
 \begin{figure}[!ht]
 \centering
@@ -265,7 +265,7 @@ Tal marcador mostra em RA os \emph{blocos de mídia} e os elos criados entre ele
 \section{Implementação da Ferramenta}
 \label{sec:implementacao_prototipo}
 
-A ferramenta de autoria BumbAR foi implementada como um componente da ferramenta Unity 3D \cite{unity}. Através da reutilização de componentes do Unity, a ferramenta BumbAR apresenta um ambiente tanto parar a autoria, com o uso de realidade aumentada, de apresentações multimídia, quanto para tocá-las.
+A ferramenta de autoria BumbAR foi implementada como uma cena da ferramenta Unity 3D \cite{unity}. Através da reutilização de objetos e funcionalidades do Unity, a ferramenta BumbAR apresenta um ambiente tanto para a autoria, com o uso de realidade aumentada, de apresentações multimídia, quanto para tocá-las.
 
 Tal ferramenta possui dois modos: \emph{modo de edição} e \emph{modo de apresentação}. O primeiro é o modo em que as apresentações multimídia são criadas usando o processo de autoria descrito anteriormente, e o segundo modo toca as apresentações desenvolvidas. A Figura \ref{fig:modos} destaca os dois modos e a integração destes com o ambiente do Unity.
 
@@ -277,11 +277,21 @@ Tal ferramenta possui dois modos: \emph{modo de edição} e \emph{modo de aprese
 \fonte{Elaborado pelo autor.}
 \end{figure}
 
-O desenvolvimento da ferramenta foi feito em C\# \cite{hejlsberg2006c}, uma das linguagens suportadas pelo Unity 3D. Para o reconhecimento de marcadores de realidade aumentada, foi utilizado o pacote Vuforia~\cite{vuforia} para Unity 3D. Os \emph{Blocos RA}, a implementação de colisões, e controle de \emph{objetos de mídia} são feitos usando componentes nativos do Unity 3D. Eventos e métodos da linguagem C\# são usados para implementar o sistema de \emph{elos causais} utilizados na ferramenta; \emph{condições} são implementadas usando eventos da linguagem C\#, e \emph{ações} são implementadas os métodos da linguagem.
+A Figura \ref{fig:componentes} mostra os componentes da ferramenta implementada. Os \emph{marcadores RA} controlam o posicionamento dos objetos de mídia, bem como dos blocos de condições, ações e demais operadores (bloco de deleção e bloco inicial). O detector de colisões é responsável pela detecção de colisões entre esses blocos. O gerenciador de elos utiliza a informação de uma colisão acontecida para, por exemplo, criar ou remover um elo. Tal gerenciamento de elos é feito de acordo com o processo descrito na Seção \ref{sec:processo_autoria}. A partir dos elos existentes, o \emph{Player} pode tocar a apresentação desenvolvida, mudando o estado da ferramenta para o \emph{modo de apresentação}. É também utilizando a informação dos elos existentes na apresentação que o \emph{NCL Parser} é utilizado para realizar a criação de um documento NCL que represente a apresentação desenvolvida. Quando o \emph{marcador de visão estrutural} está na visão da câmera, é mostrada a visão estrutural da apresentação sendo desenvolvida de acordo com os elos nela presentes.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.65\linewidth]{IMG/componentes.png}
+\caption{\textit{Componentes da ferramenta BumbAR.}}
+\label{fig:componentes}
+\fonte{Elaborado pelo autor.}
+\end{figure}
+
+O desenvolvimento da ferramenta foi feito em C\# \cite{hejlsberg2006c}, uma das linguagens suportadas pelo Unity 3D. Para o reconhecimento de marcadores de realidade aumentada, foi utilizado o pacote Vuforia~\cite{vuforia} para Unity 3D. Os \emph{Blocos RA}, a implementação de colisões, e controle de \emph{objetos de mídia} são feitos usando componentes nativos do Unity 3D. Eventos e métodos da linguagem C\# são usados para implementar o sistema de \emph{elos causais} utilizados na ferramenta; \emph{condições} são implementadas usando eventos da linguagem C\#, e \emph{ações} são implementadas utilizando os métodos da linguagem.
 
 Os \emph{marcadores RA} discutidos na Seção \ref{sec:processo_autoria} são suportados na ferramenta. A adição de novos marcadores (por exemplo, para suportar todos os eventos do modelo NCM) é possível e relativamente simples para pessoas com conhecimento do funcionamento do Unity 3D. Marcadores extras podem ser criados utilizando o portal de desenvolvimento do Vuforia. Para implementar novas ações e condições, é necessário implementar seus comportamentos usando eventos e métodos da linguagem C\#.
 
-Além de tocar a apresentação multimídia criada, a ferramenta \emph{BumbAR} também suporta a exportação da apresentação para a linguagem NCL. NCL é a linguagem padrão do Sistema Brasileiro de TV Digital Terrestre \cite{abnt201115606} e recomendação ITU-T H.761 da União Internacional de Telecomunicações \cite{itu761}. Existem tocadores NCL gratuitos e comerciais tanto para TV \cite{soares_ginga-ncl_2010} e para a Web \cite{melo_webncl_2012, silva_ncl4web_2013}. Assim, uma apresentação multimídia desenvolvida utilizando a ferramenta \emph{BumbAR} também pode ser executada nesses ambientes. Como a ferramenta e a linguagem NCL usam conceitos similares provenientes do modelo NCM, como \emph{objetos de mídia} e \emph{elos causais}, exportar a representação interna da BumbAR para NCL não demandou muito esforço de implementação.
+Como mencionado anteriormente, além de tocar a apresentação multimídia criada, a ferramenta \emph{BumbAR} também suporta a exportação da apresentação para a linguagem NCL. NCL é a linguagem padrão do Sistema Brasileiro de TV Digital Terrestre \cite{abnt201115606} e recomendação ITU-T H.761 da União Internacional de Telecomunicações \cite{itu761}. Existem tocadores NCL gratuitos e comerciais tanto para TV \cite{soares_ginga-ncl_2010} e para a Web \cite{melo_webncl_2012, silva_ncl4web_2013}. Assim, uma apresentação multimídia desenvolvida utilizando a ferramenta \emph{BumbAR} também pode ser executada nesses ambientes. Como a ferramenta e a linguagem NCL usam conceitos similares provenientes do modelo NCM, como \emph{objetos de mídia} e \emph{elos causais}, exportar a representação interna da BumbAR para NCL não demandou muito esforço de implementação.
 
 
 \end{document}

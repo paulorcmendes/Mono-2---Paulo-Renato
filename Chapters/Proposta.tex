@@ -4,14 +4,14 @@
 
 \chapter{Autoria multimídia com RA}\label{cap:proposta}
 
-A principal contribuição deste trabalho é a proposta e avaliação de um processo de autoria baseado em realidade aumentada para a autoria de apresentações multimídia. O processo de autoria proposto é implementada na ferramenta de autoria \emph{BumbAR}, que permite a criação de conteúdo multimídia, bem como a visualização do resultado final. Além disso, a apresentação criada pode ser apresentada em navegadores de internet ou aparelhos de TV digital.
+A principal contribuição deste trabalho é a proposta e avaliação de um processo de autoria baseado em realidade aumentada para a autoria de apresentações multimídia. O processo de autoria proposto é implementado na ferramenta de autoria \emph{BumbAR}, que permite a criação de conteúdo multimídia, bem como a visualização do resultado final. Além disso, a apresentação criada pode ser apresentada em navegadores de internet ou aparelhos de TV digital.
 
 No que se segue, são discutidos o processo de autoria proposto ~(Seção~\ref{sec:processo_autoria}) e sua implementação na ferramenta \emph{BumbAR} ~(Seção~\ref{sec:implementacao_prototipo}).
 
 \section{Processo de Autoria}
 \label{sec:processo_autoria}
 
-O processo de autoria de apresentações multimídia proposto consistem em duas fases distintas: \emph{configuração de mídia}~(Seção~\ref{subsec:midias_configuracao}), e \emph{criação de elos}~(Seção~\ref{subsec:criacao_elos}).
+O processo de autoria de apresentações multimídia proposto consiste em duas fases distintas: \emph{configuração de mídias}~(Seção~\ref{subsec:midias_configuracao}), e \emph{criação de elos}~(Seção~\ref{subsec:criacao_elos}).
 
 \subsection{Fase de configuração de mídias}
 \label{subsec:midias_configuracao}
@@ -126,7 +126,7 @@ Para criar um elo causal entre dois \emph{objetos de mídia}, o usuário deve se
     \item Associar o \emph{bloco de mídia-com-condição} com o \emph{bloco de mídia-com-ação}, criando um elo causal;
 \end{enumerate}
 
-O passo 1 acima é realizado arrastando e colidindo um \emph{bloco de condição} com um \emph{bloco de mídia}. Fazendo-se isso, um ícone que representa condição usada é adicionado ao canto superior direito do \emph{bloco de mídia}, e este torna-se um \emph{bloco de mídia-com-condição}. Um \emph{bloco de mídia-com-condição} é representado pelo mesmo \emph{bloco de mídia} que foi usado para criá-lo, mas marcado com uma condição (para fazer parte do elo). A Figura \ref{fig:midia_condicao} mostra esse processo (é possível observar que o ícone aparece no canto superior direito do \emph{bloco de mídia}).
+O passo 1 acima é realizado arrastando e colidindo um \emph{bloco de condição} com um \emph{bloco de mídia}. Fazendo-se isso, um ícone que representa a condição usada é adicionado ao canto superior direito do \emph{bloco de mídia}, e este torna-se um \emph{bloco de mídia-com-condição}. Um \emph{bloco de mídia-com-condição} é representado pelo mesmo \emph{bloco de mídia} que foi usado para criá-lo, mas marcado com uma condição (para fazer parte do elo). A Figura \ref{fig:midia_condicao} mostra esse processo (é possível observar que o ícone aparece no canto superior direito do \emph{bloco de mídia}).
 
 \begin{figure}[!ht]
 \centering
@@ -172,7 +172,7 @@ Finalmente, o passo 3, que descreve a criação do elo em si, é realizado por m
 \fonte{Elaborado pelo autor.}
 \end{figure}
 
-A abordagem proposta também possui o \emph{bloco inicial}. Tal bloco é usado para marcar um \emph{bloco de mídia} informando que \emph{objeto de mídia} associado a ele deve ser iniciado assim que a apresentação multimídia sendo criada começar. De modo semelhantes aos processos descritos anteriormente, deve-se arrastar e colidir um \emph{bloco de mídia} com o \emph{bloco inicial}. Dessa forma, um ícone com o símbolo do \emph{bloco inicial} é adicionado ao canto superior esquerdo do \emph{bloco de mídia}. A Figura \ref{fig:inicial} ilustra esse processo. Caso o usuário deseje remover este comportamento do \emph{objeto de mídia}, basta colidir novamente o \emph{bloco de mídia} correspondente com o \emph{bloco inicial}. Assim, o ícone adicionado é removido e o comportamento de iniciar assim que a apresentação começa não mais ocorre.
+A abordagem proposta também possui o \emph{bloco inicial}. Tal bloco é usado para marcar um \emph{bloco de mídia} informando que \emph{objeto de mídia} associado a ele deve ser iniciado assim que a apresentação multimídia sendo criada começar. De modo semelhante aos processos descritos anteriormente, deve-se arrastar e colidir um \emph{bloco de mídia} com o \emph{bloco inicial}. Dessa forma, um ícone com o símbolo do \emph{bloco inicial} é adicionado ao canto superior esquerdo do \emph{bloco de mídia}. A Figura \ref{fig:inicial} ilustra esse processo. Caso o usuário deseje remover este comportamento do \emph{objeto de mídia}, basta colidir novamente o \emph{bloco de mídia} correspondente com o \emph{bloco inicial}. Assim, o ícone adicionado é removido e o comportamento de iniciar assim que a apresentação começa não mais ocorre.
 
 \begin{figure}[!h]
   \begin{subfigure}{0.49\linewidth}
@@ -188,7 +188,7 @@ A abordagem proposta também possui o \emph{bloco inicial}. Tal bloco é usado p
 \fonte{Elaborado pelo autor.}
 \end{figure}
 
-Além dos marcadores relacionados à blocos, a abordagem proposta possui dois marcadores especiais, o \emph{marcador de elos} e o \emph{marcador de visão estrutural}. Esses marcadores foram adicionados à proposta com base nos resultados colhidos do experimento que será descrito no Capítulo \ref{cap:avaliacao}.
+Além dos marcadores relacionados à blocos, o processo proposto possui dois marcadores especiais, o \emph{marcador de elos} e o \emph{marcador de visão estrutural}. Esses marcadores foram adicionados à proposta com base nos resultados colhidos do experimento que é descrito no Capítulo \ref{cap:avaliacao}.
 
 O \emph{marcador de elos}~(Figura \ref{fig:elo}(a)) mostra, empilhados, todos os elos criados pelo usuário utilizando o processo de criação de elos descrito anteriormente. Um elo é representado pelo \emph{bloco de elo}~(Figura \ref{fig:elo}(b)). 
 
